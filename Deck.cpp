@@ -124,8 +124,8 @@ void Deck::shuffleStack(){
         cardStack.push_back(i);
     }
     cardsDrawn.clear();
-    auto rd = random_device {};
-    auto rng = default_random_engine{ rd()};
+    auto rd = random_device{}();
+    auto rng = default_random_engine{ rd};
     shuffle(begin(cardStack), end(cardStack), rng);
 }
 

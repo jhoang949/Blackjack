@@ -12,7 +12,7 @@ using namespace std;
 class Card{
 private:
     unsigned value=0;
-    string rank="0";
+    char rank='0';
     char suit='S';
 
 public:
@@ -21,7 +21,7 @@ public:
 
     // Card getters for value, rank and suit
     unsigned getValue();
-    string getRank();
+    char getRank();
     char getSuit();
 };
 
