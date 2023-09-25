@@ -18,8 +18,8 @@ private:
 public:
     Player(string n,float startingStack);
     void clearHand();
-    void dealCard(Card c);
-    int checkHand();
+    void dealPlayer(Card c);
+    unsigned checkHand();
 
     void playerBet(float b);
     void playerWin();

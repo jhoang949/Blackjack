@@ -34,19 +34,12 @@ int main(){
         cin >> act;
         switch (act){
             case 'H':
-                table.hitPlayer("cheche");
+                table.hitPlayer(name);
                 continue;
             case 'S':
                 break;
         }
     }
 
-    for(auto &i: table.getPlayers()){
-        cout << i.getName() << "   ";
-        for (auto &j : i.getHand()){
-            cout << j.getValue() << j.getSuit() << " ";
-        }
-        cout << "\n";
-    }
 
 }

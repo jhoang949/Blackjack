@@ -23,14 +23,14 @@ void BlackjackTable::dealHands() {
     }
     for(int j=0; j<2; j++) {
         for (auto & player : tablePlayers) {
-            player.dealCard(bjDeck.drawCard());
+            player.dealPlayer(bjDeck.drawCard());
         }
     }
 }
 
 void BlackjackTable::hitDealer(){
     while (tablePlayers.at(0).checkHand()<17)
-        tablePlayers.at(0).dealCard(bjDeck.drawCard());
+        tablePlayers.at(0).dealPlayer(bjDeck.drawCard());
 }
 
 void BlackjackTable::printTable() {
@@ -39,7 +39,7 @@ void BlackjackTable::printTable() {
     cout << "Player Hands: " << "\n";
     for(auto i=tablePlayers.begin()+1; i!=tablePlayers.end(); i++){
         printf("%-15s ", i->getName().c_str());
-        for(auto & j : i->getHand())
+        for (auto &j: i->getHand())
             cout << "(" << j.getRank() << j.getSuit() << ") ";
         cout << "\n";
     }
@@ -53,7 +53,7 @@ void BlackjackTable::shuffleDeck() {
 void BlackjackTable::hitPlayer(string name){
     for(auto &i : tablePlayers){
         if(i.getName() == name) {
-            i.dealCard(bjDeck.drawCard());
+            i.dealPlayer(bjDeck.drawCard());
             break;
         }
     }

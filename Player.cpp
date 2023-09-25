@@ -13,24 +13,28 @@ void Player::clearHand() {
     hand.clear();
 }
 
-void Player::dealCard(Card c) {
+void Player::dealPlayer(Card c) {
     hand.push_back(c);
 }
 
-int Player::checkHand() {
-    int sum = 0;
+unsigned Player::checkHand() {
+    unsigned sum = 0;
     unsigned ace=0;
     for (auto & i : hand){
         if(i.getRank() == 'A'){
             sum += 11;
             ace+=1;
         }
-        else if (i.getRank() == 'K' || i.getRank() == 'Q'  || i.getRank() == 'J')
+        else if (i.getRank() == 'K' || i.getRank() == 'Q'  || i.getRank() == 'J' || i.getRank() == 'T')
             sum += 10;
-        if(sum > 21 && ace != 0)
+        else
+            sum += i.getValue();
+        if(sum > 21 && ace != 0){
             sum -= 10;
+            ace -= 1;
+        }
     }
-    return 0;
+    return sum;
 }
 
 void Player::playerBet(float b) {
