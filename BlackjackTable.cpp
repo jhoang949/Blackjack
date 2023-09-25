@@ -30,7 +30,7 @@ void BlackjackTable::dealHands() {
 
 void BlackjackTable::hitDealer(){
     while (tablePlayers.at(0).checkHand()<17)
-        tablePlayers.at(0).playerHit(bjDeck.drawCard());
+        tablePlayers.at(0).dealCard(bjDeck.drawCard());
 }
 
 void BlackjackTable::printTable() {
@@ -50,7 +50,7 @@ void BlackjackTable::shuffleDeck() {
 }
 
 
-void BlackjackTable::hitPlayer(const string& name){
+void BlackjackTable::hitPlayer(string name){
     for(auto &i : tablePlayers){
         if(i.getName() == name) {
             i.dealCard(bjDeck.drawCard());

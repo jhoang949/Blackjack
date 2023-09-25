@@ -19,7 +19,6 @@ public:
     Player(string n,float startingStack);
     void clearHand();
     void dealCard(Card c);
-    void playerHit(Card card);
     int checkHand();
 
     void playerBet(float b);

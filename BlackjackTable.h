@@ -27,7 +27,7 @@ public:
     void shuffleDeck();
 
 
-    void hitPlayer(const string& name);
+    void hitPlayer(string name);
     vector<Player> getPlayers();
 };
 
