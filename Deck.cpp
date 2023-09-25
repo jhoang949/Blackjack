@@ -93,10 +93,13 @@ void Deck::createBjDeck() {
                 switch (j){
                     case 1:
                         suit = 'S';
+                        break;
                     case 2:
                         suit = 'C';
+                        break;
                     case 3:
                         suit = 'D';
+                        break;
                     case 4:
                         suit = 'H';
                 }

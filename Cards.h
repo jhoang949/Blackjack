@@ -21,8 +21,8 @@ public:
 
     // Card getters for value, rank and suit
     unsigned getValue();
-    char getRank();
-    char getSuit();
+    char getRank() const;
+    char getSuit() const;
 };
 
 

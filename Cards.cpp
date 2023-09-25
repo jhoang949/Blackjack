@@ -37,7 +37,7 @@ Card::Card(unsigned val, char sut){
             rank = '9';
             break;
         case 10:
-            rank = '10';
+            rank = 'T';
             break;
         case 11:
             rank = 'J';
@@ -62,12 +62,12 @@ unsigned Card::getValue() {
 }
 
 // Gets card rank
-char Card::getRank() {
+char Card::getRank() const {
     return rank;
 }
 
 // Gets card suit
-char Card::getSuit() {
+char Card::getSuit() const {
     return suit;
 }
 

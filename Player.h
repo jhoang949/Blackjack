@@ -11,13 +11,23 @@ using namespace std;
 
 class Player {
 private:
+    string name;
     float stack;
     float bet=0;
     vector<Card> hand;
 public:
-    Player(float startingStack);
+    Player(string n,float startingStack);
+    void clearHand();
+    void dealCard(Card c);
     void playerHit(Card card);
     int checkHand();
+
+    void playerBet(float b);
+    void playerWin();
+    void playerLose();
+
+    string getName();
+    vector<Card> getHand();
 };
 
 
