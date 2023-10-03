@@ -29,7 +29,7 @@ unsigned Player::checkHand() {
             sum += 10;
         else
             sum += i.getValue();
-        if(sum > 21 && ace != 0){
+        while(sum > 21 && ace != 0){
             sum -= 10;
             ace -= 1;
         }
@@ -37,7 +37,7 @@ unsigned Player::checkHand() {
     return sum;
 }
 
-void Player::playerBet(float b) {
+void Player::setBet(float b) {
     bet = b;
 }
 

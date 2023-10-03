@@ -21,7 +21,7 @@ public:
     void dealPlayer(Card c);
     unsigned checkHand();
 
-    void playerBet(float b);
+    void setBet(float b);
     void playerWin();
     void playerLose();
 
